@@ -1,9 +1,10 @@
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import { Button } from "@chakra-ui/react";
+import GameGrid from "./components/GameGrid";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -21,19 +22,17 @@ function App() {
             <NavBar />
           </GridItem>
           <Show above="lg">
-            <GridItem area="aside" bg="gold">
-              Aside
-            </GridItem>
+            <GridItem area="aside">Aside</GridItem>
           </Show>
 
-          <GridItem area="main" bg="dodgerblue">
-            Main
+          <GridItem area="main">
+            <GameGrid />
           </GridItem>
         </Grid>
       </div>
       <div className="App">
         {/* {isDark && (document.body.style.backgroundColor = "black")} */}
-        <SearchBar onToggle={() => setIsDark(!isDark)} />
+        {/* <SearchBar onToggle={() => setIsDark(!isDark)} /> */}
       </div>
     </>
   );
