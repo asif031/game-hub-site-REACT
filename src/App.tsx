@@ -1,8 +1,9 @@
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
-import { Button } from "./components/ui/button";
+
 import { Grid, GridItem, Show } from "@chakra-ui/react";
-import NavBar from "./componentsNative/NavBar";
+import NavBar from "./components/NavBar";
+import { Button } from "@chakra-ui/react";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -19,7 +20,7 @@ function App() {
           <GridItem area="nav">
             <NavBar />
           </GridItem>
-          <Show when="lg">
+          <Show above="lg">
             <GridItem area="aside" bg="gold">
               Aside
             </GridItem>
