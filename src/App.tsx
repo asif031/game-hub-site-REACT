@@ -5,6 +5,7 @@ import { Grid, GridItem, Show, Text } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import { Button } from "@chakra-ui/react";
 import GameGrid from "./components/GameGrid";
+import GenreList from "./components/GenreList";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -22,7 +23,9 @@ function App() {
             <NavBar />
           </GridItem>
           <Show above="lg">
-            <GridItem area="aside">Aside</GridItem>
+            <GridItem area="aside">
+              <GenreList />
+            </GridItem>
           </Show>
 
           <GridItem area="main">
