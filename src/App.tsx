@@ -39,6 +39,7 @@ function App() {
           }}
         >
           <GridItem area="nav">
+            hello
             <NavBar />
           </GridItem>
           <Show above="lg">
